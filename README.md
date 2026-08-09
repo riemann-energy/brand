@@ -69,7 +69,7 @@ scripts/           build, contraste, fuentes y og:image
 ```
 
 **El `og:image` no lleva copy.** Es marca y wordmark, nada más: el mensaje sale de `content`, no
-de acá. Cuando el sitio necesite un og por página, se genera en `web` leyendo `content`
+de acá. Cuando el sitio necesite un og por página, se genera en `site` leyendo `content`
 ([ADR-0007](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md)).
 
 **Primitivos y semánticos están separados a propósito.** Un primitivo es `celadon.3 = #BADDCE`;

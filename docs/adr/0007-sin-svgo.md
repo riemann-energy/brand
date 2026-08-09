@@ -56,6 +56,6 @@ Ninguno era sobre optimización. Los tres están resueltos.
 
 | | Qué apareció | Cómo se resolvió |
 |---|---|---|
-| 🔴 | **`og.svg` tenía copy incrustado** — «Entre 6 y 15% de tu factura». Contenido dentro de `brand`, contra el flujo direccional. Y una afirmación con cifra sin fila en la matriz de prueba | ✅ [ADR-0007 cross-repo](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md): el og queda sin copy. El og por página se genera en `web` desde `content` |
+| 🔴 | **`og.svg` tenía copy incrustado** — «Entre 6 y 15% de tu factura». Contenido dentro de `brand`, contra el flujo direccional. Y una afirmación con cifra sin fila en la matriz de prueba | ✅ [ADR-0007 cross-repo](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md): el og queda sin copy. El og por página se genera en `site` desde `content` |
 | 🔴 | **`og.svg` era SVG con `<text>`** — las plataformas que renderizan `og:image` mayormente no soportan SVG, y ninguna tiene Funnel Display | ✅ Ahora es `og.png` 1200×630, rasterizado con las fuentes incrustadas |
 | 🟠 | **Dos colores fuera del sistema** — `#131614` y `#9BA5A0` | ✅ `#131614` → `graphite.14`; el `#9BA5A0` desapareció al rehacer el og |
