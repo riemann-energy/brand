@@ -8,6 +8,9 @@ Ahí están el mapa, las convenciones y las decisiones que cruzan repos.
 ⚠️ **Nada que identifique a un cliente entra acá.** Ni nombres, ni RPUs, ni sucursales, ni
 montos, ni capturas de producto. Es el repo con menos margen de error del sistema.
 
+`npm run check:privacy` lo verifica y corre **antes que todo lo demás** en CI. Si salta un falso
+positivo, ajustá el patrón y dejá escrito por qué — no lo silencies caso por caso.
+
 ## El sistema está congelado
 
 Paleta, marca, tipografía y medidas se congelaron el 2026-08-07 (D22–D29). Si te piden cambiar
@@ -34,6 +37,15 @@ errores y no lo son.
 Y una que no necesita ADR: **un token nuevo necesita su `$description`**, en español. Los
 comentarios del sistema explican decisiones de diseño que no se pueden perder — por qué el ámbar
 se corrió 24° para dejarle sitio al gas LP, por qué en tema claro el CTA se invierte.
+
+## Antes de commitear
+
+```bash
+npm run check     # privacidad · reglas del sistema · contraste · dist/ al día
+```
+
+Si tocaste la marca, las tipografías o el `og:image`, corré también `npm run check:visual`
+(necesita Playwright, que no es dependencia del repo).
 
 ## Si tomás una decisión, escribila
 
