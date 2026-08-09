@@ -31,6 +31,13 @@ el sitio, el deck, los impresos y la plataforma.
 **Siempre con un tag.** Apuntar a `main` significa que el sistema puede cambiarte abajo de los
 pies sin aviso.
 
+Las tipografías van aparte, para que quien solo quiera tokens no se lleve 116 kb:
+
+```html
+<link rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/riemann-energy/brand@v1.0.0/dist/fonts.css">
+```
+
 ### Usarlo
 
 ```html
@@ -71,6 +78,8 @@ y no una búsqueda del hex por todos lados. Los primitivos no salen al CSS.
 npm install
 npm run build     # tokens/**.json → dist/
 npm run check     # build + contraste WCAG en ambos temas
+
+node scripts/fetch-fonts.mjs   # solo al actualizar tipografías (una vez al año, si acaso)
 ```
 
 **Nunca edites `dist/`.** Es salida generada: tu cambio se pierde en el siguiente build. Se
@@ -81,11 +90,15 @@ Guía paso a paso: [`meta/how-to/cambiar-un-token.md`](https://github.com/rieman
 ## Publicar una versión
 
 ```
-build → check → commit → tag → los consumidores suben su tag
+build → check → CHANGELOG.md → commit → tag → los consumidores suben su tag
 ```
 
 El tag no es opcional: es lo que ven jsDelivr y `package.json`. Sin tag, el cambio no existe
-para nadie.
+para nadie — y la falla es silenciosa.
+
+**Qué número subir** ([ADR-0008](docs/adr/0008-versionado.md)): MAJOR si se renombra o elimina un
+token, **o si un cambio de valor altera el contraste**; MINOR si se agrega algo; PATCH si cambia
+un valor sin tocar nombres ni contraste.
 
 ---
 

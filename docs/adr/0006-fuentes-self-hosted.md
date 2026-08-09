@@ -36,8 +36,16 @@ el repo, lo que se auditó es lo que se sirve, y un cambio pasa por un commit.
 **3 · Velocidad.** Elimina la resolución de DNS y el handshake TCP hacia otro host, que en sitios
 simples es una parte medible del tiempo de carga.
 
-**Por qué `latin-ext` no es opcional:** es el subconjunto que trae los acentos y la ñ. Sin él, el
-sitio se ve bien en inglés y roto en español — que es el idioma del contenido.
+**Por qué variable y no estáticos:** medido, **116.5 kb contra 285.9 kb**, y 6 archivos contra
+14. Un archivo variable trae todo el rango de peso; los estáticos, uno por peso. El sistema usa
+tres pesos (400, 500 y 600), así que la diferencia es real y no teórica.
+
+**Por qué `latin-ext`, con el dato correcto:** el español **entero cabe en `latin`** — la ñ es
+U+00F1, los acentos van de U+00E1 a U+00FA, y comillas y guiones caen en U+2000-206F. `latin-ext`
+es para checo, polaco y turco. Se trae igual porque **su costo en runtime es cero**: con
+`unicode-range` el navegador solo descarga ese archivo si la página usa un carácter de ese rango.
+Cubre un cliente «Müller» o una marca «Škoda» sin pagar nada por anticipado. Lo único que paga es
+el peso del repo: 42.8 de los 116.5 kb.
 
 ## Consecuencias
 
@@ -66,5 +74,9 @@ sitio se ve bien en inglés y roto en español — que es el idioma del contenid
 
 ## Estado
 
-⬜ **Decidido, no ejecutado.** Los archivos todavía no están en `fonts/`; las maquetas siguen
-cargando de Google Fonts. Ver [`fonts/README.md`](../../fonts/README.md).
+✅ **Ejecutado.** Los 6 archivos y las 3 licencias están en `fonts/`, y `dist/fonts.css` tiene las
+`@font-face`. Se traen con `scripts/fetch-fonts.mjs`, que vive en el repo para que el origen de
+cada archivo quede documentado.
+
+Las maquetas del taller siguen cargando de Google Fonts, y así se quedan: son registro congelado,
+no código vivo.
