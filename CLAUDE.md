@@ -37,8 +37,14 @@ un valor:
 Nombres de token en **inglés**; `$description` y comentarios en **español**. Es
 [ADR-0006](https://github.com/riemann-energy/meta/blob/main/why/0006-idioma.md).
 
-## Migración en curso
+## El mapa de nomenclatura vieja
 
-`scripts/legacy-map.json` mapea los nombres viejos en español a los nuevos. Existe para migrar
-las maquetas del taller. **Cuando no quede ningún consumidor con nombres viejos, ese archivo se
-borra** — mientras exista, es deuda visible.
+`scripts/legacy-map.json` traduce los nombres viejos en español a los nuevos.
+
+**Las maquetas del taller NO se migran.** Son el registro de lo que se probó y se aprobó, no
+código vivo: se quedan congeladas con su propio `tokens.css` y su nomenclatura vieja. El mapa
+existe para el momento en que se construya el sitio — quien escriba un componente mirando
+`taller/10-paginas/retail.html` como referencia lo usa para saber que el `var(--acento)` de la
+maqueta es `var(--color-accent-default)` en el sistema.
+
+**Se borra cuando el sitio esté construido** y ya no quede nadie leyendo maquetas viejas.
