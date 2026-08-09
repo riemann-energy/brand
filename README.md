@@ -91,6 +91,11 @@ para nadie.
 
 ## Decisiones
 
+**De este repo** — [`docs/adr/`](docs/adr/): por qué los primitivos no salen al CSS, por qué los
+transforms van explícitos, por qué `dist/` se commitea, por qué la rampa se numera por posición.
+
+**Que lo cruzan con los demás:**
+
 | | |
 |---|---|
 | [ADR-0002](https://github.com/riemann-energy/meta/blob/main/why/0002-brand-publico.md) | Por qué este repo es público |
