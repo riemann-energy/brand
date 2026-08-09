@@ -1,0 +1,3 @@
+# dist/ se commitea porque jsDelivr sirve archivos del repo, no artefactos de
+# build. Marcarlo como generado hace que GitHub colapse sus diffs en los PR.
+dist/** linguist-generated=true

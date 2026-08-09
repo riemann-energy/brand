@@ -1,0 +1,36 @@
+name: check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Build
+        run: npm run build
+
+      # dist/ está commiteado porque jsDelivr sirve archivos del repo. Si el build
+      # produce algo distinto de lo commiteado, es que alguien editó dist/ a mano o
+      # se olvidó de correr el build — y los consumidores estarían recibiendo algo
+      # que no sale de los tokens.
+      - name: dist/ está al día con los tokens
+        run: |
+          if ! git diff --exit-code --stat dist/; then
+            echo "::error::dist/ no coincide con el build. Corré 'npm run build' y commiteá el resultado."
+            exit 1
+          fi
+
+      - name: Contraste WCAG en ambos temas
+        run: npm run check:contrast

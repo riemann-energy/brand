@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<!-- og:image · lockup sobre grafito, según el sistema (símbolo 96px, sep proporcional) -->
+  <rect width="1200" height="630" fill="#0E100F"/>
+  <g transform="translate(96,240) scale(4)">
+    <path fill="#EDEFEE" d="M1.4 5.1 L3 3.5 H10.4 V20.5 H1.4 Z"/>
+    <path fill="#BADDCE" d="M13.6 3.5 H22.6 V18.9 L21 20.5 H13.6 Z"/>
+  </g>
+  <text x="212" y="352" font-family="Funnel Display, Hanken Grotesk, sans-serif"
+        font-size="76" font-weight="600" letter-spacing="-2.1" fill="#EDEFEE">Riemann</text>
+  <text x="512" y="352" font-family="Funnel Display, Hanken Grotesk, sans-serif"
+        font-size="76" font-weight="400" letter-spacing="-2.1" fill="#9BA5A0">Energy</text>
+  <text x="98" y="440" font-family="Hanken Grotesk, sans-serif" font-size="34" fill="#9BA5A0">Entre 6 y 15% de tu factura. Medido, no prometido.</text>
+  <rect x="98" y="500" width="120" height="3" fill="#BADDCE"/>
+</svg>

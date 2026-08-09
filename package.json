@@ -1,0 +1,28 @@
+{
+  "name": "@riemann-energy/tokens",
+  "version": "1.0.0",
+  "description": "Sistema de marca de Riemann Energy: tokens de diseño, marca y tipografías",
+  "license": "UNLICENSED",
+  "private": false,
+  "type": "module",
+  "main": "dist/tokens.js",
+  "style": "dist/tokens.css",
+  "exports": {
+    ".": "./dist/tokens.js",
+    "./css": "./dist/tokens.css",
+    "./tokens.css": "./dist/tokens.css"
+  },
+  "files": ["dist", "brand-assets", "fonts"],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check:contrast": "node scripts/check-contrast.mjs",
+    "check": "npm run build && npm run check:contrast",
+    "prepublishOnly": "npm run check"
+  },
+  "devDependencies": {
+    "style-dictionary": "^5.0.0"
+  }
+}

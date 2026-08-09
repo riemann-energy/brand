@@ -1,0 +1,98 @@
+/* ═══════════════════════════════════════════════════════════════════
+   SISTEMA RIEMANN ENERGY · generado, NO editar a mano
+   ───────────────────────────────────────────────────────────────────
+   Fuente: tokens/**.json (formato DTCG)
+   Build:  npm run build
+   El origen único de color, tipografía y medidas. Ninguna maqueta ni
+   componente escribe un valor a mano: todos importan este archivo.
+   ═══════════════════════════════════════════════════════════════════ */
+
+:root {
+  --font-family-display: "Funnel Display", "Hanken Grotesk", system-ui, sans-serif; /** Títulos. Condensada, formas cortadas. Respaldo de sistema: Helvetica Neue Medium. */
+  --font-family-body: "Hanken Grotesk", system-ui, sans-serif; /** Cuerpo. Respaldo de sistema: Helvetica. */
+  --font-family-mono: "Geist Mono", ui-monospace, monospace; /** Dato. Toda cifra auditable va en mono. Respaldo de sistema: SF Mono. */
+  --font-size-label: 11px; /** Etiqueta y eyebrow, en mono */
+  --font-size-small: 13.5px; /** Pie de gráfica, nota, metadato */
+  --font-size-body: 16px; /** El que se lee de verdad */
+  --font-size-body-lg: 20px; /** Bajada de hero, párrafo destacado */
+  --font-size-h3: 23px;
+  --font-size-h2: clamp(28px, 3.2vw, 40px); /** Fluido: escala con el ancho, no con puntos de quiebre */
+  --font-size-h1: clamp(42px, 5.4vw, 68px); /** Fluido: escala con el ancho, no con puntos de quiebre */
+  --font-leading-display: 1.02;
+  --font-leading-tight: 1.2;
+  --font-leading-body: 1.62;
+  --font-tracking-display: -0.032em; /** Tracking de título */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 48px;
+  --space-section: clamp(56px, 6.5vw, 100px); /** El aire entre secciones */
+  --radius-box: 4px;
+  --radius-button: 3px;
+  --radius-pill: 100px; /** Distingue estado de contenedor */
+  --motion-duration-default: 420ms; /** Entradas, hover, cambios de estado */
+  --motion-duration-slow: 900ms; /** Barras, contadores, gráficas */
+  --motion-easing-default: cubic-bezier(0.32, 0.72, 0, 1);
+  --motion-distance: 18px; /** Desplazamiento de entrada */
+  --motion-stagger: 90ms; /** Escalonado entre hermanos */
+}
+
+/* ══ TEMA OSCURO — base del sitio y del producto ══ */
+[data-theme="dark"] {
+  --color-bg-default: #0b0c0c;
+  --color-bg-surface: #121414;
+  --color-bg-surface-raised: #191c1c;
+  --color-bg-surface-alt: #0f1111; /** Filas alternas de tabla */
+  --color-border-default: #252929;
+  --color-border-subtle: #1b1f1f;
+  --color-fg-default: #edefee;
+  --color-fg-muted: #8a918f;
+  --color-fg-subtle: #5c6362;
+  --color-accent-default: #baddce;
+  --color-accent-hover: #cfe9de;
+  --color-accent-on: #0b0c0c; /** El color del texto que va ENCIMA del acento */
+  --color-accent-subtle: #161e1b;
+  --color-accent-border: #2e3f39;
+  --color-status-critical: #f0555f;
+  --color-status-warning: #e8b23c;
+  --color-status-info: #6a9ce0;
+  --color-status-success: #42ac57;
+  --color-utility-electricity: #ede96a;
+  --color-utility-gas: #e07a45;
+  --color-utility-diesel: #a08fdb;
+  --color-utility-water: #5fb3d9;
+  --color-utility-waste: #93876f;
+  --effect-field: radial-gradient(85% 60% at 50% -10%, #FFFFFF08 0%, transparent 60%); /** El campo: halo superior sutil */
+  --effect-grain: 0.03; /** Opacidad del grano */
+}
+
+/* ══ TEMA CLARO — slides, impresión y modo claro del sitio ══ */
+[data-theme="light"] {
+  --color-bg-default: #f4f4f3;
+  --color-bg-surface: #ffffff;
+  --color-bg-surface-raised: #fafaf9;
+  --color-bg-surface-alt: #f8f8f7;
+  --color-border-default: #e0e1df;
+  --color-border-subtle: #ebecea;
+  --color-fg-default: #0e100f;
+  --color-fg-muted: #585e5c;
+  --color-fg-subtle: #868c8a;
+  --color-accent-default: #1c3a30;
+  --color-accent-hover: #122a22;
+  --color-accent-on: #baddce;
+  --color-accent-subtle: #e7f2ed;
+  --color-accent-border: #c3d9cf;
+  --color-status-critical: #c42f36;
+  --color-status-warning: #9a7407;
+  --color-status-info: #2358ce;
+  --color-status-success: #1e7a3a;
+  --color-utility-electricity: #7e8a00;
+  --color-utility-gas: #a85c14;
+  --color-utility-diesel: #5b47a8;
+  --color-utility-water: #0e6e96;
+  --color-utility-waste: #6e6353;
+  --effect-field: none;
+  --effect-grain: 0.015; /** Opacidad del grano */
+}

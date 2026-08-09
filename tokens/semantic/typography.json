@@ -1,0 +1,42 @@
+{
+  "$description": "Tipografía — congelada el 2026-08-07 (D28). Las tres familias son SIL Open Font License: cero licencias, cero costo, incrustables en PDF. Escala de razón 1.333, la cuarta justa.",
+  "font": {
+    "family": {
+      "display": {
+        "$value": "\"Funnel Display\", \"Hanken Grotesk\", system-ui, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Títulos. Condensada, formas cortadas. Respaldo de sistema: Helvetica Neue Medium."
+      },
+      "body": {
+        "$value": "\"Hanken Grotesk\", system-ui, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Cuerpo. Respaldo de sistema: Helvetica."
+      },
+      "mono": {
+        "$value": "\"Geist Mono\", ui-monospace, monospace",
+        "$type": "fontFamily",
+        "$description": "Dato. Toda cifra auditable va en mono. Respaldo de sistema: SF Mono."
+      }
+    },
+
+    "size": {
+      "label":   { "$value": "11px",   "$type": "dimension", "$description": "Etiqueta y eyebrow, en mono" },
+      "small":   { "$value": "13.5px", "$type": "dimension", "$description": "Pie de gráfica, nota, metadato" },
+      "body":    { "$value": "16px",   "$type": "dimension", "$description": "El que se lee de verdad" },
+      "body-lg": { "$value": "20px",   "$type": "dimension", "$description": "Bajada de hero, párrafo destacado" },
+      "h3":      { "$value": "23px",   "$type": "dimension" },
+      "h2":      { "$value": "clamp(28px, 3.2vw, 40px)", "$type": "fluid", "$description": "Fluido: escala con el ancho, no con puntos de quiebre" },
+      "h1":      { "$value": "clamp(42px, 5.4vw, 68px)", "$type": "fluid", "$description": "Fluido: escala con el ancho, no con puntos de quiebre" }
+    },
+
+    "leading": {
+      "display": { "$value": "1.02", "$type": "number" },
+      "tight":   { "$value": "1.2",  "$type": "number" },
+      "body":    { "$value": "1.62", "$type": "number" }
+    },
+
+    "tracking": {
+      "display": { "$value": "-0.032em", "$type": "dimension", "$description": "Tracking de título" }
+    }
+  }
+}

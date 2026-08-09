@@ -1,0 +1,46 @@
+{
+  "$description": "Tema claro — slides, impresión y modo claro del sitio. Mismos nombres semánticos que el tema oscuro; solo cambian los primitivos que referencian.",
+  "color": {
+    "bg": {
+      "default":        { "$value": "{color.graphite.3}", "$type": "color" },
+      "surface":        { "$value": "{color.graphite.0}", "$type": "color" },
+      "surface-raised": { "$value": "{color.graphite.1}", "$type": "color" },
+      "surface-alt":    { "$value": "{color.graphite.2}", "$type": "color" }
+    },
+    "border": {
+      "default": { "$value": "{color.graphite.6}", "$type": "color" },
+      "subtle":  { "$value": "{color.graphite.5}", "$type": "color" }
+    },
+    "fg": {
+      "default": { "$value": "{color.graphite.16}", "$type": "color" },
+      "muted":   { "$value": "{color.graphite.10}", "$type": "color" },
+      "subtle":  { "$value": "{color.graphite.8}",  "$type": "color" }
+    },
+    "accent": {
+      "$description": "En claro el celadón NO puede rellenar un CTA: no hay contraste. Se invierte — el botón es tinta profunda con el texto en celadón.",
+      "default": { "$value": "{color.celadon.5}", "$type": "color" },
+      "hover":   { "$value": "{color.celadon.6}", "$type": "color" },
+      "on":      { "$value": "{color.celadon.3}", "$type": "color" },
+      "subtle":  { "$value": "{color.celadon.0}", "$type": "color" },
+      "border":  { "$value": "{color.celadon.2}", "$type": "color" }
+    },
+    "status": {
+      "critical": { "$value": "{color.red.700}",   "$type": "color" },
+      "warning":  { "$value": "{color.amber.700}", "$type": "color" },
+      "info":     { "$value": "{color.blue.700}",  "$type": "color" },
+      "success":  { "$value": "{color.green.700}", "$type": "color" }
+    },
+    "utility": {
+      "electricity": { "$value": "{color.yellow.700}", "$type": "color" },
+      "gas":         { "$value": "{color.orange.700}", "$type": "color" },
+      "diesel":      { "$value": "{color.violet.700}", "$type": "color" },
+      "water":       { "$value": "{color.cyan.700}",   "$type": "color" },
+      "waste":       { "$value": "{color.clay.700}",   "$type": "color" }
+    }
+  },
+
+  "effect": {
+    "field": { "$value": "none",   "$type": "custom-css" },
+    "grain": { "$value": "0.015",  "$type": "number", "$description": "Opacidad del grano" }
+  }
+}

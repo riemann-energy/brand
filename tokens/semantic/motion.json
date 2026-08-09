@@ -1,0 +1,17 @@
+{
+  "$description": "Movimiento — congelado el 2026-08-07 (D29). Curva de salida pronunciada: arranca rápido y desacelera largo, que es lo que hace que el movimiento «aterrice».",
+  "motion": {
+    "duration": {
+      "default": { "$value": "420ms", "$type": "duration", "$description": "Entradas, hover, cambios de estado" },
+      "slow":    { "$value": "900ms", "$type": "duration", "$description": "Barras, contadores, gráficas" }
+    },
+    "easing": {
+      "default": {
+        "$value": "cubic-bezier(0.32, 0.72, 0, 1)",
+        "$type": "custom-css"
+      }
+    },
+    "distance": { "$value": "18px", "$type": "dimension", "$description": "Desplazamiento de entrada" },
+    "stagger":  { "$value": "90ms", "$type": "duration",  "$description": "Escalonado entre hermanos" }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "$description": "Espaciado, radios y efectos — congelados el 2026-08-07 (D29). Unidad base 8; radios cortos para no contradecir el chaflán de la marca.",
+  "space": {
+    "1": { "$value": "4px",  "$type": "dimension" },
+    "2": { "$value": "8px",  "$type": "dimension" },
+    "3": { "$value": "16px", "$type": "dimension" },
+    "4": { "$value": "24px", "$type": "dimension" },
+    "5": { "$value": "32px", "$type": "dimension" },
+    "6": { "$value": "48px", "$type": "dimension" },
+    "section": {
+      "$value": "clamp(56px, 6.5vw, 100px)",
+      "$type": "fluid",
+      "$description": "El aire entre secciones"
+    }
+  },
+
+  "radius": {
+    "$description": "Cortos, para no contradecir el chaflán de la marca.",
+    "box":    { "$value": "4px",   "$type": "dimension" },
+    "button": { "$value": "3px",   "$type": "dimension" },
+    "pill":   { "$value": "100px", "$type": "dimension", "$description": "Distingue estado de contenedor" }
+  }
+}
