@@ -81,10 +81,26 @@ y no una búsqueda del hex por todos lados. Los primitivos no salen al CSS.
 ```bash
 npm install
 npm run build     # tokens/**.json → dist/
-npm run check     # build + contraste WCAG en ambos temas
+npm run check     # build + reglas del sistema + contraste WCAG en ambos temas
 
-node scripts/fetch-fonts.mjs   # solo al actualizar tipografías (una vez al año, si acaso)
+npm run fonts     # solo al actualizar tipografías (una vez al año, si acaso)
+npm run og        # solo al cambiar la marca
 ```
+
+**Los chequeos.** `npm run check` corre en cada push y dura segundos: verifica que `dist/`
+coincida con los tokens, que ningún color esté escrito a mano en la capa semántica, que las
+referencias resuelvan, que los SVG usen colores del sistema, que cada tipografía tenga su
+licencia, y el contraste WCAG en los dos temas.
+
+Hay un segundo nivel que necesita navegador —que el `og.png` siga coincidiendo con su plantilla y
+que las tipografías cubran el español— y corre en un job de CI aparte. En local:
+
+```bash
+npm i -D playwright && npx playwright install chromium
+npm run check:visual
+```
+
+Qué se chequea y por qué: [ADR-0009](docs/adr/0009-estrategia-de-chequeos.md).
 
 **Nunca edites `dist/`.** Es salida generada: tu cambio se pierde en el siguiente build. Se
 commitea igual porque jsDelivr sirve archivos del repo, no artefactos de build.

@@ -16,6 +16,7 @@ nueva que la supersede.
 | [0006](0006-fuentes-self-hosted.md) | Las tipografías van self-hosted | ✅ Aceptada |
 | [0007](0007-sin-svgo.md) | Los SVG no pasan por SVGO | ✅ Aceptada |
 | [0008](0008-versionado.md) | SemVer con CHANGELOG a mano, sin Changesets | ✅ Aceptada |
+| [0009](0009-estrategia-de-chequeos.md) | Qué se chequea, y por qué el navegador va aparte | ✅ Aceptada |
 
 ## Sin decidir todavía
 

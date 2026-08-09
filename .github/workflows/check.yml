@@ -6,6 +6,7 @@ on:
   pull_request:
 
 jobs:
+  # Corre en cada push. Sin navegador: son segundos.
   check:
     runs-on: ubuntu-latest
     steps:
@@ -32,5 +33,29 @@ jobs:
             exit 1
           fi
 
+      - name: Reglas del sistema
+        run: npm run check:tokens
+
       - name: Contraste WCAG en ambos temas
         run: npm run check:contrast
+
+  # Job aparte porque instala un navegador (~130 MB). Solo corre cuando el cambio
+  # puede afectar lo que se ve: los assets, las tipografías o el script que los usa.
+  visual:
+    runs-on: ubuntu-latest
+    if: |
+      github.event_name == 'push' ||
+      contains(github.event.pull_request.labels.*.name, 'visual')
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+      - run: npm i -D playwright && npx playwright install --with-deps chromium
+
+      - name: og.png al día y tipografías completas
+        run: npm run check:visual

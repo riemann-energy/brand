@@ -18,8 +18,12 @@
   },
   "scripts": {
     "build": "node scripts/build.mjs",
+    "check:tokens": "node scripts/check-tokens.mjs",
     "check:contrast": "node scripts/check-contrast.mjs",
-    "check": "npm run build && npm run check:contrast",
+    "check:visual": "node scripts/check-visual.mjs",
+    "check": "npm run build && npm run check:tokens && npm run check:contrast",
+    "fonts": "node scripts/fetch-fonts.mjs",
+    "og": "node scripts/render-og.mjs",
     "prepublishOnly": "npm run check"
   },
   "devDependencies": {
