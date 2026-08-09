@@ -33,6 +33,11 @@ jobs:
             exit 1
           fi
 
+      # Va antes que todo: el repo es PÚBLICO, así que un dato de cliente acá no
+      # es un riesgo preventivo sino una filtración.
+      - name: Datos de cliente
+        run: npm run check:privacy
+
       - name: Reglas del sistema
         run: npm run check:tokens
 
