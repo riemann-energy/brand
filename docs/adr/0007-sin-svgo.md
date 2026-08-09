@@ -52,14 +52,10 @@ de ser innecesario y pasa a ser obligatorio, y este ADR se supersede.
 
 ## Anexo · Lo que sí apareció al revisarlos
 
-Ninguno es sobre optimización. Están acá porque se encontraron en esta revisión y no tenían
-dónde vivir.
+Ninguno era sobre optimización. Los tres están resueltos.
 
-| | Qué | Estado |
+| | Qué apareció | Cómo se resolvió |
 |---|---|---|
-| 🔴 | **`og.svg` tiene copy incrustado** — «Entre 6 y 15% de tu factura. Medido, no prometido.» Eso es contenido, y `brand` no debe contener contenido ([ADR-0003 cross-repo](https://github.com/riemann-energy/meta/blob/main/why/0003-flujo-direccional.md)). Además es una afirmación con cifra, que necesita su fila en la matriz de prueba | ⬜ sin resolver |
-| 🔴 | **`og.svg` es SVG y usa `<text>`** — las plataformas que renderizan `og:image` (WhatsApp, LinkedIn, Slack) mayormente **no soportan SVG**, y ninguna tiene Funnel Display instalada. Tal como está, no funciona como og:image | ⬜ sin resolver |
-| 🟠 | **Dos colores fuera del sistema** — `#131614` en `favicon.svg` y `#9BA5A0` en `og.svg` no existen en los primitivos. Se eligieron a ojo | ⬜ sin resolver |
-
-Los tres tocan a `brand` **y** a `content`, así que la decisión de qué hacer con `og.svg` es
-cross-repo y va a `meta/why/` cuando se tome.
+| 🔴 | **`og.svg` tenía copy incrustado** — «Entre 6 y 15% de tu factura». Contenido dentro de `brand`, contra el flujo direccional. Y una afirmación con cifra sin fila en la matriz de prueba | ✅ [ADR-0007 cross-repo](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md): el og queda sin copy. El og por página se genera en `web` desde `content` |
+| 🔴 | **`og.svg` era SVG con `<text>`** — las plataformas que renderizan `og:image` mayormente no soportan SVG, y ninguna tiene Funnel Display | ✅ Ahora es `og.png` 1200×630, rasterizado con las fuentes incrustadas |
+| 🟠 | **Dos colores fuera del sistema** — `#131614` y `#9BA5A0` | ✅ `#131614` → `graphite.14`; el `#9BA5A0` desapareció al rehacer el og |

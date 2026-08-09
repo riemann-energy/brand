@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+<!-- Riemann Energy · plantilla del og:image · SOLO marca y wordmark.
+     Sin claims ni cifras: eso es contenido y vive en el repo `content`.
+     Esta es la fuente editable; lo que se publica como og:image es og.png,
+     rasterizado con scripts/render-og.mjs. Ver meta/why/0007. -->
+  <rect width="1200" height="630" fill="#0B0C0C"/>
+  <g transform="translate(96,232) scale(4.2)">
+    <path fill="#EDEFEE" d="M1.4 5.1 L3 3.5 H10.4 V20.5 H1.4 Z"/>
+    <path fill="#BADDCE" d="M13.6 3.5 H22.6 V18.9 L21 20.5 H13.6 Z"/>
+  </g>
+  <!-- Un solo <text> con tspans: el espacio entre las dos palabras sale del flujo,
+       no de una x calculada a mano que se desalinea al cambiar de fuente o peso. -->
+  <text x="232" y="352" font-family="Funnel Display, Hanken Grotesk, sans-serif"
+        font-size="76" letter-spacing="-2.4">
+    <tspan font-weight="600" fill="#EDEFEE">Riemann</tspan><tspan font-weight="400" fill="#8A918F" dx="18">Energy</tspan>
+  </text>
+  <rect x="234" y="398" width="96" height="3" fill="#BADDCE"/>
+</svg>

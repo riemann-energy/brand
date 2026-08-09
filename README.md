@@ -62,11 +62,15 @@ Las tipografías van aparte, para que quien solo quiera tokens no se lleve 116 k
 tokens/
 ├── primitives/    los valores crudos, sin significado — NO se usan directo
 └── semantic/      los roles: bg, fg, accent, status, utility… — esto es lo que se usa
-brand-assets/      marca, versión mono, favicon, og
+brand-assets/      marca, versión mono, favicon, og:image
 fonts/             las tres OFL, self-hosted
 dist/              ⚠️ GENERADO — nunca se edita a mano
-scripts/           build y chequeo de contraste
+scripts/           build, contraste, fuentes y og:image
 ```
+
+**El `og:image` no lleva copy.** Es marca y wordmark, nada más: el mensaje sale de `content`, no
+de acá. Cuando el sitio necesite un og por página, se genera en `web` leyendo `content`
+([ADR-0007](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md)).
 
 **Primitivos y semánticos están separados a propósito.** Un primitivo es `celadon.3 = #BADDCE`;
 un semántico es `color.accent.default = {celadon.3}`. Así "cambiamos el celadón" es **un valor**,

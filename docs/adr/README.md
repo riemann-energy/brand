@@ -19,13 +19,12 @@ nueva que la supersede.
 
 ## Sin decidir todavía
 
-| | Qué falta | Dónde |
-|---|---|---|
-| **Qué hacer con `og.svg`** | Tiene copy incrustado y es SVG con `<text>`: no funciona como og:image y contiene contenido, que no debe vivir en `brand`. Toca también a `content` → la decisión es cross-repo | [anexo del ADR-0007](0007-sin-svgo.md#anexo--lo-que-sí-apareció-al-revisarlos) |
-| **Dos colores fuera del sistema** | `#131614` y `#9BA5A0` no existen en los primitivos | idem |
+**Ninguna.** Las tres cosas que estaban abiertas se resolvieron: el `og:image` en
+[ADR-0007 cross-repo](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md), y
+los dos colores fuera del sistema al rehacerlo.
 
-**Publicación en npm** no es un hueco: está diferida a propósito y con disparador definido, en
-[ARCHITECTURE de `meta`](https://github.com/riemann-energy/meta/blob/main/ARCHITECTURE.md).
+**Publicación en npm** tampoco es un hueco: está diferida a propósito y con disparador definido,
+en [ARCHITECTURE de `meta`](https://github.com/riemann-energy/meta/blob/main/ARCHITECTURE.md).
 
 ---
 
