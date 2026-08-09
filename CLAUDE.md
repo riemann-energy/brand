@@ -37,14 +37,9 @@ un valor:
 Nombres de token en **inglés**; `$description` y comentarios en **español**. Es
 [ADR-0006](https://github.com/riemann-energy/meta/blob/main/why/0006-idioma.md).
 
-## El mapa de nomenclatura vieja
+## Este repo muestra el presente, no la historia
 
-`scripts/legacy-map.json` traduce los nombres viejos en español a los nuevos.
-
-**Las maquetas del taller NO se migran.** Son el registro de lo que se probó y se aprobó, no
-código vivo: se quedan congeladas con su propio `tokens.css` y su nomenclatura vieja. El mapa
-existe para el momento en que se construya el sitio — quien escriba un componente mirando
-`taller/10-paginas/retail.html` como referencia lo usa para saber que el `var(--acento)` de la
-maqueta es `var(--color-accent-default)` en el sistema.
-
-**Se borra cuando el sitio esté construido** y ya no quede nadie leyendo maquetas viejas.
+Acá no hay mapas de migración ni nombres deprecados: lo que está es lo vigente. Si te topás con
+un artefacto viejo que usa nombres en español —una maqueta del taller—, la traducción está en el
+[anexo del ADR-0006](https://github.com/riemann-energy/meta/blob/main/why/0006-anexo-mapa-de-nombres.json),
+que es donde vive lo histórico.
