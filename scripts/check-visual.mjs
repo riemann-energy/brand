@@ -33,34 +33,42 @@ const navegador = await chromium.launch();
 const incrustar = async (archivo) =>
   `data:font/woff2;base64,${(await readFile(`fonts/${archivo}`)).toString('base64')}`;
 
-// ── 1 · El og.png commiteado coincide con su plantilla ───────────────────────
+// ── 1 · El og.png salió de sus inputs actuales ────────────────────────────────
+//
+// NO se re-renderiza para comparar bytes. Ese era el diseño anterior y no podía
+// pasar en CI: el hash de un PNG depende del Chromium que lo produce, y el workflow
+// instala Playwright sin pinear. Fallaba cada vez que el navegador se actualizaba,
+// sin que nada real hubiera cambiado. Ver docs/adr/0004.
+//
+// Lo que se verifica es lo que importa: que el PNG commiteado corresponda a los
+// inputs commiteados. El centinela lo escribe `render-og.mjs` en el mismo paso que
+// produce el PNG, así que no se puede actualizar sin renderizar.
 {
-  const svg = await readFile('brand-assets/og-template.svg', 'utf8');
-  const html = `<!doctype html><meta charset="utf-8"><style>
-    @font-face { font-family:"Funnel Display"; src:url("${await incrustar('funnel-display-latin.woff2')}") format("woff2"); font-weight:300 800; }
-    @font-face { font-family:"Hanken Grotesk"; src:url("${await incrustar('hanken-grotesk-latin.woff2')}") format("woff2"); font-weight:300 800; }
-    html,body{margin:0;padding:0} svg{display:block}
-  </style>${svg}`;
+  const INPUTS = [
+    'brand-assets/og-template.svg',
+    'fonts/funnel-display-latin.woff2',
+    'fonts/hanken-grotesk-latin.woff2',
+  ];
 
-  const pagina = await navegador.newPage({ viewport: { width: 1200, height: 630 } });
-  await pagina.setContent(html);
-  await pagina.evaluate(async () => {
-    await Promise.all([
-      document.fonts.load('600 76px "Funnel Display"'),
-      document.fonts.load('400 76px "Funnel Display"'),
-    ]);
-    await document.fonts.ready;
-  });
-  const recien = await pagina.screenshot();
-  await pagina.close();
+  const huella = createHash('sha256');
+  for (const archivo of INPUTS) huella.update(await readFile(archivo));
+  const actual = huella.digest('hex');
 
-  const hash = (b) => createHash('sha256').update(b).digest('hex').slice(0, 12);
-  const commiteado = await readFile('brand-assets/og.png');
-  if (hash(recien) !== hash(commiteado)) {
+  let centinela;
+  try {
+    centinela = (await readFile('brand-assets/og.inputs.sha256', 'utf8')).trim().split(/\s+/)[0];
+  } catch {
     fallos.push(
-      'og.png no coincide con og-template.svg\n' +
-        `     commiteado ${hash(commiteado)} · regenerado ${hash(recien)}\n` +
-        '     corré: node scripts/render-og.mjs',
+      'falta brand-assets/og.inputs.sha256\n' + '      corré: node scripts/render-og.mjs',
+    );
+  }
+
+  if (centinela && centinela !== actual) {
+    fallos.push(
+      'og.png no salió de los inputs actuales\n' +
+        `      centinela ${centinela.slice(0, 12)} · inputs ${actual.slice(0, 12)}\n` +
+        '      cambió la plantilla o una tipografía y nadie regeneró el PNG\n' +
+        '      corré: node scripts/render-og.mjs',
     );
   }
 }

@@ -15,6 +15,7 @@
  *   npm i -D playwright && npx playwright install chromium
  */
 import { readFile, writeFile } from 'node:fs/promises';
+import { createHash } from 'node:crypto';
 
 let chromium;
 try {
@@ -26,6 +27,14 @@ try {
   );
   process.exit(1);
 }
+
+// Los tres archivos de los que sale el PNG. Si cambia cualquiera y nadie
+// re-renderiza, el og publicado queda mintiendo — es lo que el centinela detecta.
+const INPUTS = [
+  'brand-assets/og-template.svg',
+  'fonts/funnel-display-latin.woff2',
+  'fonts/hanken-grotesk-latin.woff2',
+];
 
 const svg = await readFile('brand-assets/og-template.svg', 'utf8');
 
@@ -75,5 +84,20 @@ if (!cargada) throw new Error('Funnel Display no cargó: el render saldría con 
 await pagina.screenshot({ path: 'brand-assets/og.png' });
 await navegador.close();
 
+// ── El centinela de inputs ────────────────────────────────────────────────────
+//
+// Se escribe ACÁ, en el mismo paso que produce el PNG, y no en otro lado: eso es lo
+// que lo hace confiable. El centinela dice «este og.png salió de estos tres
+// archivos», y solo se actualiza cuando el render efectivamente corre.
+//
+// El chequeo (check-visual.mjs) recalcula el hash de los inputs y lo compara. NO
+// re-renderiza: comparar bytes de un render contra otro Chromium hace que el chequeo
+// falle cada vez que el navegador se actualiza, sin que nada real haya cambiado.
+// Ver docs/adr/0004.
+const huella = createHash('sha256');
+for (const archivo of INPUTS) huella.update(await readFile(archivo));
+await writeFile('brand-assets/og.inputs.sha256', `${huella.digest('hex')}  ${INPUTS.join(' ')}\n`);
+
 const { size } = await import('node:fs').then((fs) => fs.promises.stat('brand-assets/og.png'));
 console.log(`✓ brand-assets/og.png — 1200×630, ${(size / 1024).toFixed(1)} kb`);
+console.log('✓ brand-assets/og.inputs.sha256 — el centinela de sus inputs');
