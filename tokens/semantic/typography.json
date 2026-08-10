@@ -18,25 +18,77 @@
         "$description": "Dato. Toda cifra auditable va en mono. Respaldo de sistema: SF Mono."
       }
     },
-
     "size": {
-      "label":   { "$value": "11px",   "$type": "dimension", "$description": "Etiqueta y eyebrow, en mono" },
-      "small":   { "$value": "13.5px", "$type": "dimension", "$description": "Pie de gráfica, nota, metadato" },
-      "body":    { "$value": "16px",   "$type": "dimension", "$description": "El que se lee de verdad" },
-      "body-lg": { "$value": "20px",   "$type": "dimension", "$description": "Bajada de hero, párrafo destacado" },
-      "h3":      { "$value": "23px",   "$type": "dimension" },
-      "h2":      { "$value": "clamp(28px, 3.2vw, 40px)", "$type": "fluid", "$description": "Fluido: escala con el ancho, no con puntos de quiebre" },
-      "h1":      { "$value": "clamp(42px, 5.4vw, 68px)", "$type": "fluid", "$description": "Fluido: escala con el ancho, no con puntos de quiebre" }
+      "label": {
+        "$value": "11px",
+        "$type": "dimension",
+        "$description": "Etiqueta y eyebrow, en mono"
+      },
+      "small": {
+        "$value": "13.5px",
+        "$type": "dimension",
+        "$description": "Pie de gráfica, nota, metadato"
+      },
+      "body": {
+        "$value": "16px",
+        "$type": "dimension",
+        "$description": "El que se lee de verdad"
+      },
+      "body-lg": {
+        "$value": "20px",
+        "$type": "dimension",
+        "$description": "Bajada de hero, párrafo destacado"
+      },
+      "h3": {
+        "$value": "23px",
+        "$type": "dimension"
+      },
+      "h2": {
+        "$value": "clamp(28px, 3.2vw, 40px)",
+        "$type": "fluid",
+        "$description": "Fluido: escala con el ancho, no con puntos de quiebre"
+      },
+      "h1": {
+        "$value": "clamp(42px, 5.4vw, 68px)",
+        "$type": "fluid",
+        "$description": "Fluido: escala con el ancho, no con puntos de quiebre"
+      },
+      "hero": {
+        "$value": "clamp(46px, 6.4vw, 86px)",
+        "$type": "fluid",
+        "$description": "El titular del hero. Tiene escala propia: es la pieza más grande del sitio y no comparte tamaño con los h2 de sección"
+      },
+      "wordmark": {
+        "$value": "22px",
+        "$type": "dimension",
+        "$description": "Medida oficial del wordmark en el lockup del nav, con símbolo de 30px (taller/05-marca §03)"
+      },
+      "wordmark-sm": {
+        "$value": "15px",
+        "$type": "dimension",
+        "$description": "Variante mínima con nombre, para el pie: símbolo de 20px"
+      }
     },
-
     "leading": {
-      "display": { "$value": "1.02", "$type": "number" },
-      "tight":   { "$value": "1.2",  "$type": "number" },
-      "body":    { "$value": "1.62", "$type": "number" }
+      "display": {
+        "$value": "1.02",
+        "$type": "number"
+      },
+      "tight": {
+        "$value": "1.2",
+        "$type": "number"
+      },
+      "body": {
+        "$value": "1.62",
+        "$type": "number"
+      }
     },
-
     "tracking": {
-      "display": { "$value": "-0.032em", "$type": "dimension", "$description": "Tracking de título" }
+      "display": {
+        "$value": "-0.032em",
+        "$type": "dimension",
+        "$description": "Tracking de título"
+      }
     }
   }
 }

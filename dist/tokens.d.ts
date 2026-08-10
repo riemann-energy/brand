@@ -11,6 +11,9 @@ export declare const base: {
     'font-size-h3': string;
     'font-size-h2': string;
     'font-size-h1': string;
+    'font-size-hero': string;
+    'font-size-wordmark': string;
+    'font-size-wordmark-sm': string;
     'font-leading-display': string;
     'font-leading-tight': string;
     'font-leading-body': string;

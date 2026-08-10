@@ -18,6 +18,9 @@
   --font-size-h3: 23px;
   --font-size-h2: clamp(28px, 3.2vw, 40px); /** Fluido: escala con el ancho, no con puntos de quiebre */
   --font-size-h1: clamp(42px, 5.4vw, 68px); /** Fluido: escala con el ancho, no con puntos de quiebre */
+  --font-size-hero: clamp(46px, 6.4vw, 86px); /** El titular del hero. Tiene escala propia: es la pieza más grande del sitio y no comparte tamaño con los h2 de sección */
+  --font-size-wordmark: 22px; /** Medida oficial del wordmark en el lockup del nav, con símbolo de 30px (taller/05-marca §03) */
+  --font-size-wordmark-sm: 15px; /** Variante mínima con nombre, para el pie: símbolo de 20px */
   --font-leading-display: 1.02;
   --font-leading-tight: 1.2;
   --font-leading-body: 1.62;
