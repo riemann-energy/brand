@@ -15,6 +15,7 @@ export const base = {
   "font-size-wordmark-sm": "15px",
   "font-size-giant": "clamp(96px, 17vw, 230px)",
   "font-size-figure": "26px",
+  "font-size-figure-lg": "clamp(34px, 4vw, 54px)",
   "font-leading-display": "1.02",
   "font-leading-tight": "1.2",
   "font-leading-body": "1.62",

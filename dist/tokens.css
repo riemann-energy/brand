@@ -23,6 +23,7 @@
   --font-size-wordmark-sm: 15px; /** Variante mínima con nombre, para el pie: símbolo de 20px */
   --font-size-giant: clamp(96px, 17vw, 230px); /** La cifra que domina una sección entera. Se usa una vez por página, como mucho: dos cifras gigantes compiten y ninguna gana */
   --font-size-figure: 26px; /** Cifra de lista, en mono y con numeración tabular para que las columnas alineen */
+  --font-size-figure-lg: clamp(34px, 4vw, 54px); /** Cifra de zócalo: grande pero por debajo del titular, para que no compita con él */
   --font-leading-display: 1.02;
   --font-leading-tight: 1.2;
   --font-leading-body: 1.62;

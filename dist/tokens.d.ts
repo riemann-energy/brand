@@ -16,6 +16,7 @@ export declare const base: {
     'font-size-wordmark-sm': string;
     'font-size-giant': string;
     'font-size-figure': string;
+    'font-size-figure-lg': string;
     'font-leading-display': string;
     'font-leading-tight': string;
     'font-leading-body': string;

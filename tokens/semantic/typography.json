@@ -77,6 +77,11 @@
         "$value": "26px",
         "$type": "dimension",
         "$description": "Cifra de lista, en mono y con numeración tabular para que las columnas alineen"
+      },
+      "figure-lg": {
+        "$value": "clamp(34px, 4vw, 54px)",
+        "$type": "fluid",
+        "$description": "Cifra de zócalo: grande pero por debajo del titular, para que no compita con él"
       }
     },
     "leading": {
