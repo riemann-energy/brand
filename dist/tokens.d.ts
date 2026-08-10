@@ -29,6 +29,9 @@ export declare const base: {
     'layout-gutter': string;
     'motion-duration-default': string;
     'motion-duration-slow': string;
+    'motion-duration-ambient-1': string;
+    'motion-duration-ambient-2': string;
+    'motion-duration-ambient-3': string;
     'motion-easing-default': string;
     'motion-distance': string;
     'motion-stagger': string;

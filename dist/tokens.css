@@ -36,6 +36,9 @@
   --layout-gutter: clamp(20px, 5vw, 56px); /** Respiro lateral, fluido */
   --motion-duration-default: 420ms; /** Entradas, hover, cambios de estado */
   --motion-duration-slow: 900ms; /** Barras, contadores, gráficas */
+  --motion-duration-ambient-1: 26s; /** Respiración de la atmósfera. Los tres valores son distintos A PROPÓSITO: si fueran iguales, las tres auras latirían juntas y el fondo se leería como un pulso en vez de como movimiento */
+  --motion-duration-ambient-2: 34s;
+  --motion-duration-ambient-3: 42s;
   --motion-easing-default: cubic-bezier(0.32, 0.72, 0, 1);
   --motion-distance: 18px; /** Desplazamiento de entrada */
   --motion-stagger: 90ms; /** Escalonado entre hermanos */

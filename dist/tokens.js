@@ -28,6 +28,9 @@ export const base = {
   "layout-gutter": "clamp(20px, 5vw, 56px)",
   "motion-duration-default": "420ms",
   "motion-duration-slow": "900ms",
+  "motion-duration-ambient-1": "26s",
+  "motion-duration-ambient-2": "34s",
+  "motion-duration-ambient-3": "42s",
   "motion-easing-default": "cubic-bezier(0.32, 0.72, 0, 1)",
   "motion-distance": "18px",
   "motion-stagger": "90ms"
