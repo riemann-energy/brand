@@ -1,0 +1,94 @@
+// Generado por scripts/build.mjs — no editar a mano.
+
+export declare const base: {
+    'font-family-display': string;
+    'font-family-body': string;
+    'font-family-mono': string;
+    'font-size-label': string;
+    'font-size-small': string;
+    'font-size-body': string;
+    'font-size-body-lg': string;
+    'font-size-h3': string;
+    'font-size-h2': string;
+    'font-size-h1': string;
+    'font-leading-display': string;
+    'font-leading-tight': string;
+    'font-leading-body': string;
+    'font-tracking-display': string;
+    'space-1': string;
+    'space-2': string;
+    'space-3': string;
+    'space-4': string;
+    'space-5': string;
+    'space-6': string;
+    'space-section': string;
+    'radius-box': string;
+    'radius-button': string;
+    'radius-pill': string;
+    'layout-container': string;
+    'layout-gutter': string;
+    'motion-duration-default': string;
+    'motion-duration-slow': string;
+    'motion-easing-default': string;
+    'motion-distance': string;
+    'motion-stagger': string;
+};
+
+export declare const dark: {
+    'color-bg-default': string;
+    'color-bg-surface': string;
+    'color-bg-surface-raised': string;
+    'color-bg-surface-alt': string;
+    'color-border-default': string;
+    'color-border-subtle': string;
+    'color-fg-default': string;
+    'color-fg-muted': string;
+    'color-fg-subtle': string;
+    'color-accent-default': string;
+    'color-accent-hover': string;
+    'color-accent-on': string;
+    'color-accent-subtle': string;
+    'color-accent-border': string;
+    'color-status-critical': string;
+    'color-status-warning': string;
+    'color-status-info': string;
+    'color-status-success': string;
+    'color-utility-electricity': string;
+    'color-utility-gas': string;
+    'color-utility-diesel': string;
+    'color-utility-water': string;
+    'color-utility-waste': string;
+    'effect-field': string;
+    'effect-grain': string;
+};
+
+export declare const light: {
+    'color-bg-default': string;
+    'color-bg-surface': string;
+    'color-bg-surface-raised': string;
+    'color-bg-surface-alt': string;
+    'color-border-default': string;
+    'color-border-subtle': string;
+    'color-fg-default': string;
+    'color-fg-muted': string;
+    'color-fg-subtle': string;
+    'color-accent-default': string;
+    'color-accent-hover': string;
+    'color-accent-on': string;
+    'color-accent-subtle': string;
+    'color-accent-border': string;
+    'color-status-critical': string;
+    'color-status-warning': string;
+    'color-status-info': string;
+    'color-status-success': string;
+    'color-utility-electricity': string;
+    'color-utility-gas': string;
+    'color-utility-diesel': string;
+    'color-utility-water': string;
+    'color-utility-waste': string;
+    'effect-field': string;
+    'effect-grain': string;
+};
+
+declare const _default: { base: typeof base; dark: typeof dark; light: typeof light };
+export default _default;

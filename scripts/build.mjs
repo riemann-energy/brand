@@ -109,6 +109,21 @@ await writeFile(
   'utf8',
 );
 
+// Tipos para los consumidores con TypeScript. Aparecieron cuando `site` intentó
+// leer un token desde código: sin ellos el import es `any` y se pierde justo la
+// garantía que justifica tener una salida JS.
+const nombres = (obj) => Object.keys(obj).map((k) => `    '${k}': string;`).join('\n');
+await writeFile(
+  'dist/tokens.d.ts',
+  '// Generado por scripts/build.mjs — no editar a mano.\n\n' +
+    `export declare const base: {\n${nombres(aObjeto(base))}\n};\n\n` +
+    `export declare const dark: {\n${nombres(aObjeto(oscuro))}\n};\n\n` +
+    `export declare const light: {\n${nombres(aObjeto(claro))}\n};\n\n` +
+    'declare const _default: { base: typeof base; dark: typeof dark; light: typeof light };\n' +
+    'export default _default;\n',
+  'utf8',
+);
+
 await rm('dist/.tmp', { recursive: true, force: true });
 
 const total = Object.keys(aObjeto(base)).length + Object.keys(aObjeto(oscuro)).length;

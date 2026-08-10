@@ -32,6 +32,8 @@
   --radius-box: 4px;
   --radius-button: 3px;
   --radius-pill: 100px; /** Distingue estado de contenedor */
+  --layout-container: 1200px; /** Ancho máximo del contenido */
+  --layout-gutter: clamp(20px, 5vw, 56px); /** Respiro lateral, fluido */
   --motion-duration-default: 420ms; /** Entradas, hover, cambios de estado */
   --motion-duration-slow: 900ms; /** Barras, contadores, gráficas */
   --motion-easing-default: cubic-bezier(0.32, 0.72, 0, 1);

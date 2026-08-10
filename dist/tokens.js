@@ -24,6 +24,8 @@ export const base = {
   "radius-box": "4px",
   "radius-button": "3px",
   "radius-pill": "100px",
+  "layout-container": "1200px",
+  "layout-gutter": "clamp(20px, 5vw, 56px)",
   "motion-duration-default": "420ms",
   "motion-duration-slow": "900ms",
   "motion-easing-default": "cubic-bezier(0.32, 0.72, 0, 1)",

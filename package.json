@@ -8,9 +8,14 @@
   "main": "dist/tokens.js",
   "style": "dist/tokens.css",
   "exports": {
-    ".": "./dist/tokens.js",
+    ".": {
+      "types": "./dist/tokens.d.ts",
+      "default": "./dist/tokens.js"
+    },
     "./css": "./dist/tokens.css",
-    "./tokens.css": "./dist/tokens.css"
+    "./fonts.css": "./dist/fonts.css",
+    "./fonts/*": "./fonts/*",
+    "./assets/*": "./brand-assets/*"
   },
   "files": [
     "dist",
@@ -33,5 +38,6 @@
   },
   "devDependencies": {
     "style-dictionary": "^5.0.0"
-  }
+  },
+  "types": "dist/tokens.d.ts"
 }
