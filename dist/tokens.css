@@ -32,10 +32,15 @@
   --font-leading-body: 1.62;
   --font-leading-hero: 0.94; /** El titular del hero va más cerrado que el resto */
   --font-leading-manifesto: 0.98;
+  --font-leading-snug: 1.4; /** Textos chicos y densos: fichas, rótulos de dos líneas, pies. Faltaba, y sin él los bloques de las verticales caían al interlineado de cuerpo (1.62) y salían más aireados que el Home. */
+  --font-leading-relaxed: 1.5; /** Bajadas de hero y párrafos de entrada. El hero del Home lo escribía a mano. */
   --font-tracking-display: -0.032em; /** Tracking de título */
   --font-tracking-hero: -0.05em;
   --font-tracking-manifesto: -0.04em;
   --font-tracking-figure: -0.055em; /** Las cifras van más cerradas que el texto: el dígito ya tiene su propio aire */
+  --font-tracking-label: 0.19em; /** La etiqueta en mono versalita que abre cada sección. Estaba literal en `etiqueta.module.css`. */
+  --font-tracking-pill: 0.16em; /** Píldoras y sellos en mono versalita. Estaba literal en `pastilla.module.css`. */
+  --font-tracking-micro: 0.1em; /** Rótulos de 10–11px dentro de fichas y esquemas. */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
@@ -54,6 +59,7 @@
   --radius-pill: 100px; /** Distingue estado de contenedor */
   --layout-container: 1200px; /** Ancho máximo del contenido */
   --layout-gutter: clamp(20px, 5vw, 56px); /** Respiro lateral, fluido */
+  --shadow-glow: 0 24px 70px -40px; /** El halo bajo un elemento destacado. Es solo la GEOMETRÍA: el color lo pone quien la usa, porque cambia con el tema y con el acento. H-09 y dos bloques nuevos la tenían literal e idéntica. */
   --motion-duration-default: 420ms; /** Entradas, hover, cambios de estado */
   --motion-duration-slow: 900ms; /** Barras, contadores, gráficas */
   --motion-duration-ambient-1: 26s; /** Respiración de la atmósfera. Los tres valores son distintos A PROPÓSITO: si fueran iguales, las tres auras latirían juntas y el fondo se leería como un pulso en vez de como movimiento */
@@ -61,9 +67,11 @@
   --motion-duration-ambient-3: 42s;
   --motion-duration-flow: 2.6s; /** El punto que recorre un conector de flujo. Lento a propósito: sugiere movimiento continuo, no una animación que reclama atención */
   --motion-duration-pulse: 2.4s; /** El latido de un indicador —la barra de «sigue bajando»—: lento, para sugerir y no reclamar */
+  --motion-duration-medium: 600ms; /** Entre `default` (420ms) y `slow` (900ms). Lo pedían los resplandores de tarjeta, que con 420ms se sienten abruptos. */
   --motion-easing-default: cubic-bezier(0.32, 0.72, 0, 1);
   --motion-distance: 18px; /** Desplazamiento de entrada */
   --motion-stagger: 90ms; /** Escalonado entre hermanos */
+  --motion-lift: -3px; /** Cuánto sube un elemento al pasar el cursor. NO es `motion.distance`, que es la distancia de ENTRADA del revelado: son dos gestos distintos y usar uno por el otro daba un salto de 18px. Estaba literal en el nav, en H-03 y en tres bloques nuevos. */
 }
 
 /* ══ TEMA OSCURO — base del sitio y del producto ══ */

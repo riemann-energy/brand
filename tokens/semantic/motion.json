@@ -34,6 +34,11 @@
         "$value": "2.4s",
         "$type": "duration",
         "$description": "El latido de un indicador —la barra de «sigue bajando»—: lento, para sugerir y no reclamar"
+      },
+      "medium": {
+        "$value": "600ms",
+        "$type": "duration",
+        "$description": "Entre `default` (420ms) y `slow` (900ms). Lo pedían los resplandores de tarjeta, que con 420ms se sienten abruptos."
       }
     },
     "easing": {
@@ -51,6 +56,11 @@
       "$value": "90ms",
       "$type": "duration",
       "$description": "Escalonado entre hermanos"
+    },
+    "lift": {
+      "$value": "-3px",
+      "$type": "dimension",
+      "$description": "Cuánto sube un elemento al pasar el cursor. NO es `motion.distance`, que es la distancia de ENTRADA del revelado: son dos gestos distintos y usar uno por el otro daba un salto de 18px. Estaba literal en el nav, en H-03 y en tres bloques nuevos."
     }
   }
 }

@@ -87,5 +87,12 @@
       "$type": "fluid",
       "$description": "Respiro lateral, fluido"
     }
+  },
+  "shadow": {
+    "glow": {
+      "$value": "0 24px 70px -40px",
+      "$type": "shadow",
+      "$description": "El halo bajo un elemento destacado. Es solo la GEOMETRÍA: el color lo pone quien la usa, porque cambia con el tema y con el acento. H-09 y dos bloques nuevos la tenían literal e idéntica."
+    }
   }
 }

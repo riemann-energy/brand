@@ -120,6 +120,16 @@
       "manifesto": {
         "$value": "0.98",
         "$type": "number"
+      },
+      "snug": {
+        "$value": "1.4",
+        "$type": "number",
+        "$description": "Textos chicos y densos: fichas, rótulos de dos líneas, pies. Faltaba, y sin él los bloques de las verticales caían al interlineado de cuerpo (1.62) y salían más aireados que el Home."
+      },
+      "relaxed": {
+        "$value": "1.5",
+        "$type": "number",
+        "$description": "Bajadas de hero y párrafos de entrada. El hero del Home lo escribía a mano."
       }
     },
     "tracking": {
@@ -140,6 +150,21 @@
         "$value": "-0.055em",
         "$type": "dimension",
         "$description": "Las cifras van más cerradas que el texto: el dígito ya tiene su propio aire"
+      },
+      "label": {
+        "$value": "0.19em",
+        "$type": "dimension",
+        "$description": "La etiqueta en mono versalita que abre cada sección. Estaba literal en `etiqueta.module.css`."
+      },
+      "pill": {
+        "$value": "0.16em",
+        "$type": "dimension",
+        "$description": "Píldoras y sellos en mono versalita. Estaba literal en `pastilla.module.css`."
+      },
+      "micro": {
+        "$value": "0.1em",
+        "$type": "dimension",
+        "$description": "Rótulos de 10–11px dentro de fichas y esquemas."
       }
     }
   }

@@ -25,10 +25,15 @@ export declare const base: {
     'font-leading-body': string;
     'font-leading-hero': string;
     'font-leading-manifesto': string;
+    'font-leading-snug': string;
+    'font-leading-relaxed': string;
     'font-tracking-display': string;
     'font-tracking-hero': string;
     'font-tracking-manifesto': string;
     'font-tracking-figure': string;
+    'font-tracking-label': string;
+    'font-tracking-pill': string;
+    'font-tracking-micro': string;
     'space-1': string;
     'space-2': string;
     'space-3': string;
@@ -47,6 +52,7 @@ export declare const base: {
     'radius-pill': string;
     'layout-container': string;
     'layout-gutter': string;
+    'shadow-glow': string;
     'motion-duration-default': string;
     'motion-duration-slow': string;
     'motion-duration-ambient-1': string;
@@ -54,9 +60,11 @@ export declare const base: {
     'motion-duration-ambient-3': string;
     'motion-duration-flow': string;
     'motion-duration-pulse': string;
+    'motion-duration-medium': string;
     'motion-easing-default': string;
     'motion-distance': string;
     'motion-stagger': string;
+    'motion-lift': string;
 };
 
 export declare const dark: {

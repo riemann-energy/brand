@@ -10,6 +10,34 @@ Qué cambió en cada versión, para decidir si te conviene actualizar. Sigue
 
 ---
 
+## [1.1.0] — sin publicar
+
+**MINOR: se agregan ocho tokens, no cambia ninguno.** Los pidió la implementación de las diez
+páginas restantes del sitio: seis agentes distintos reportaron los mismos huecos sin haberse
+coordinado, que es la mejor señal de que el hueco es real y no un gusto.
+
+### Agregado
+
+- **`font.leading.snug` (1.4) y `font.leading.relaxed` (1.5)** — la escala tenía tres valores y las
+  maquetas usan cinco. Sin estos dos, los bloques nuevos caían al interlineado de cuerpo (1.62) y
+  **sus páginas salían visiblemente más aireadas que el Home**. Es la clase de deriva que no rompe
+  nada y hace que el sitio se sienta de dos manos distintas.
+- **`font.tracking.label` (0.19em), `.pill` (0.16em) y `.micro` (0.1em)** — estaban literales en
+  `etiqueta.module.css` y `pastilla.module.css`. `site`/ADR-0003 los dejó como deuda con una regla
+  explícita: *«al tercer uso se vuelve token»*. Ya pasaron de tres.
+- **`motion.lift` (-3px)** — cuánto sube un elemento al pasar el cursor. Estaba a mano en el nav, en
+  `H-03` y en tres bloques nuevos. **No es `motion.distance`**, que es la distancia de *entrada* del
+  revelado: son dos gestos distintos, y usar uno por el otro daba un salto de 18px.
+- **`motion.duration.medium` (600ms)** — entre `default` (420) y `slow` (900). Los resplandores de
+  tarjeta con 420ms se sienten abruptos.
+- **`shadow.glow`** — el sistema no tenía ninguna escala de sombra y dos bloques la escribieron
+  idéntica a mano. Es solo la **geometría**: el color lo pone quien la usa, porque cambia con el tema.
+
+**Verificado:** 89 variables, 32/32 pares de contraste pasan en ambos temas. Ningún token existente
+cambió de nombre ni de valor, así que nada de lo que ya consume `brand` se mueve.
+
+---
+
 ## [1.0.0] — sin publicar
 
 Primera versión del sistema como repositorio. Migra el `tokens.css` escrito a mano del taller a

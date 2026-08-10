@@ -24,10 +24,15 @@ export const base = {
   "font-leading-body": "1.62",
   "font-leading-hero": "0.94",
   "font-leading-manifesto": "0.98",
+  "font-leading-snug": "1.4",
+  "font-leading-relaxed": "1.5",
   "font-tracking-display": "-0.032em",
   "font-tracking-hero": "-0.05em",
   "font-tracking-manifesto": "-0.04em",
   "font-tracking-figure": "-0.055em",
+  "font-tracking-label": "0.19em",
+  "font-tracking-pill": "0.16em",
+  "font-tracking-micro": "0.1em",
   "space-1": "4px",
   "space-2": "8px",
   "space-3": "16px",
@@ -46,6 +51,7 @@ export const base = {
   "radius-pill": "100px",
   "layout-container": "1200px",
   "layout-gutter": "clamp(20px, 5vw, 56px)",
+  "shadow-glow": "0 24px 70px -40px",
   "motion-duration-default": "420ms",
   "motion-duration-slow": "900ms",
   "motion-duration-ambient-1": "26s",
@@ -53,9 +59,11 @@ export const base = {
   "motion-duration-ambient-3": "42s",
   "motion-duration-flow": "2.6s",
   "motion-duration-pulse": "2.4s",
+  "motion-duration-medium": "600ms",
   "motion-easing-default": "cubic-bezier(0.32, 0.72, 0, 1)",
   "motion-distance": "18px",
-  "motion-stagger": "90ms"
+  "motion-stagger": "90ms",
+  "motion-lift": "-3px"
 };
 
 export const dark = {
