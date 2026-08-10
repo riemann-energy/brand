@@ -29,6 +29,11 @@
         "$value": "2.6s",
         "$type": "duration",
         "$description": "El punto que recorre un conector de flujo. Lento a propósito: sugiere movimiento continuo, no una animación que reclama atención"
+      },
+      "pulse": {
+        "$value": "2.4s",
+        "$type": "duration",
+        "$description": "El latido de un indicador —la barra de «sigue bajando»—: lento, para sugerir y no reclamar"
       }
     },
     "easing": {

@@ -44,6 +44,19 @@
       "$value": "clamp(80px, 10vw, 160px)",
       "$type": "fluid",
       "$description": "El aire de una sección que cierra: más que el de una sección normal, para que se lea como final"
+    },
+    "hero-top": {
+      "$value": "clamp(60px, 8vw, 120px)",
+      "$type": "fluid"
+    },
+    "hero-bottom": {
+      "$value": "clamp(48px, 6vw, 86px)",
+      "$type": "fluid"
+    },
+    "manifesto": {
+      "$value": "clamp(72px, 9vw, 150px)",
+      "$type": "fluid",
+      "$description": "El aire del manifiesto: más que una sección normal, para que respire a sangre"
     }
   },
   "radius": {

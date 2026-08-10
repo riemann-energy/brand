@@ -18,16 +18,24 @@
   --font-size-h3: 23px;
   --font-size-h2: clamp(28px, 3.2vw, 40px); /** Fluido: escala con el ancho, no con puntos de quiebre */
   --font-size-h1: clamp(42px, 5.4vw, 68px); /** Fluido: escala con el ancho, no con puntos de quiebre */
-  --font-size-hero: clamp(46px, 6.4vw, 86px); /** El titular del hero. Tiene escala propia: es la pieza más grande del sitio y no comparte tamaño con los h2 de sección */
+  --font-size-hero: clamp(38px, 5vw, 72px); /** El titular del hero. Medida de la maqueta aprobada: a 1440px da 72px */
   --font-size-wordmark: 22px; /** Medida oficial del wordmark en el lockup del nav, con símbolo de 30px (taller/05-marca §03) */
   --font-size-wordmark-sm: 15px; /** Variante mínima con nombre, para el pie: símbolo de 20px */
   --font-size-giant: clamp(96px, 17vw, 230px); /** La cifra que domina una sección entera. Se usa una vez por página, como mucho: dos cifras gigantes compiten y ninguna gana */
   --font-size-figure: 26px; /** Cifra de lista, en mono y con numeración tabular para que las columnas alineen */
-  --font-size-figure-lg: clamp(34px, 4vw, 54px); /** Cifra de zócalo: grande pero por debajo del titular, para que no compita con él */
+  --font-size-figure-lg: clamp(52px, 7.4vw, 104px); /** Cifra de tarjeta destacada */
+  --font-size-manifesto: clamp(34px, 5.6vw, 76px); /** El titular del manifiesto: el más grande de la página después del hero */
+  --font-size-figure-md: clamp(30px, 3.5vw, 52px); /** Cifra de zócalo: grande, pero por debajo del titular para no competir */
+  --font-size-micro: 10px; /** Indicador o pista: por debajo de label, para lo que acompaña sin pedir atención */
   --font-leading-display: 1.02;
   --font-leading-tight: 1.2;
   --font-leading-body: 1.62;
+  --font-leading-hero: 0.94; /** El titular del hero va más cerrado que el resto */
+  --font-leading-manifesto: 0.98;
   --font-tracking-display: -0.032em; /** Tracking de título */
+  --font-tracking-hero: -0.05em;
+  --font-tracking-manifesto: -0.04em;
+  --font-tracking-figure: -0.055em; /** Las cifras van más cerradas que el texto: el dígito ya tiene su propio aire */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 16px;
@@ -38,6 +46,9 @@
   --space-columns: clamp(24px, 4vw, 64px); /** Separación entre columnas de una sección a dos */
   --space-columns-wide: clamp(24px, 5vw, 80px); /** Idem, cuando las dos columnas son de peso muy distinto */
   --space-section-lg: clamp(80px, 10vw, 160px); /** El aire de una sección que cierra: más que el de una sección normal, para que se lea como final */
+  --space-hero-top: clamp(60px, 8vw, 120px);
+  --space-hero-bottom: clamp(48px, 6vw, 86px);
+  --space-manifesto: clamp(72px, 9vw, 150px); /** El aire del manifiesto: más que una sección normal, para que respire a sangre */
   --radius-box: 4px;
   --radius-button: 3px;
   --radius-pill: 100px; /** Distingue estado de contenedor */
@@ -49,6 +60,7 @@
   --motion-duration-ambient-2: 34s;
   --motion-duration-ambient-3: 42s;
   --motion-duration-flow: 2.6s; /** El punto que recorre un conector de flujo. Lento a propósito: sugiere movimiento continuo, no una animación que reclama atención */
+  --motion-duration-pulse: 2.4s; /** El latido de un indicador —la barra de «sigue bajando»—: lento, para sugerir y no reclamar */
   --motion-easing-default: cubic-bezier(0.32, 0.72, 0, 1);
   --motion-distance: 18px; /** Desplazamiento de entrada */
   --motion-stagger: 90ms; /** Escalonado entre hermanos */

@@ -17,10 +17,18 @@ export declare const base: {
     'font-size-giant': string;
     'font-size-figure': string;
     'font-size-figure-lg': string;
+    'font-size-manifesto': string;
+    'font-size-figure-md': string;
+    'font-size-micro': string;
     'font-leading-display': string;
     'font-leading-tight': string;
     'font-leading-body': string;
+    'font-leading-hero': string;
+    'font-leading-manifesto': string;
     'font-tracking-display': string;
+    'font-tracking-hero': string;
+    'font-tracking-manifesto': string;
+    'font-tracking-figure': string;
     'space-1': string;
     'space-2': string;
     'space-3': string;
@@ -31,6 +39,9 @@ export declare const base: {
     'space-columns': string;
     'space-columns-wide': string;
     'space-section-lg': string;
+    'space-hero-top': string;
+    'space-hero-bottom': string;
+    'space-manifesto': string;
     'radius-box': string;
     'radius-button': string;
     'radius-pill': string;
@@ -42,6 +53,7 @@ export declare const base: {
     'motion-duration-ambient-2': string;
     'motion-duration-ambient-3': string;
     'motion-duration-flow': string;
+    'motion-duration-pulse': string;
     'motion-easing-default': string;
     'motion-distance': string;
     'motion-stagger': string;

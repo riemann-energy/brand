@@ -54,9 +54,9 @@
         "$description": "Fluido: escala con el ancho, no con puntos de quiebre"
       },
       "hero": {
-        "$value": "clamp(46px, 6.4vw, 86px)",
+        "$value": "clamp(38px, 5vw, 72px)",
         "$type": "fluid",
-        "$description": "El titular del hero. Tiene escala propia: es la pieza más grande del sitio y no comparte tamaño con los h2 de sección"
+        "$description": "El titular del hero. Medida de la maqueta aprobada: a 1440px da 72px"
       },
       "wordmark": {
         "$value": "22px",
@@ -79,9 +79,24 @@
         "$description": "Cifra de lista, en mono y con numeración tabular para que las columnas alineen"
       },
       "figure-lg": {
-        "$value": "clamp(34px, 4vw, 54px)",
+        "$value": "clamp(52px, 7.4vw, 104px)",
         "$type": "fluid",
-        "$description": "Cifra de zócalo: grande pero por debajo del titular, para que no compita con él"
+        "$description": "Cifra de tarjeta destacada"
+      },
+      "manifesto": {
+        "$value": "clamp(34px, 5.6vw, 76px)",
+        "$type": "fluid",
+        "$description": "El titular del manifiesto: el más grande de la página después del hero"
+      },
+      "figure-md": {
+        "$value": "clamp(30px, 3.5vw, 52px)",
+        "$type": "fluid",
+        "$description": "Cifra de zócalo: grande, pero por debajo del titular para no competir"
+      },
+      "micro": {
+        "$value": "10px",
+        "$type": "dimension",
+        "$description": "Indicador o pista: por debajo de label, para lo que acompaña sin pedir atención"
       }
     },
     "leading": {
@@ -96,6 +111,15 @@
       "body": {
         "$value": "1.62",
         "$type": "number"
+      },
+      "hero": {
+        "$value": "0.94",
+        "$type": "number",
+        "$description": "El titular del hero va más cerrado que el resto"
+      },
+      "manifesto": {
+        "$value": "0.98",
+        "$type": "number"
       }
     },
     "tracking": {
@@ -103,6 +127,19 @@
         "$value": "-0.032em",
         "$type": "dimension",
         "$description": "Tracking de título"
+      },
+      "hero": {
+        "$value": "-0.05em",
+        "$type": "dimension"
+      },
+      "manifesto": {
+        "$value": "-0.04em",
+        "$type": "dimension"
+      },
+      "figure": {
+        "$value": "-0.055em",
+        "$type": "dimension",
+        "$description": "Las cifras van más cerradas que el texto: el dígito ya tiene su propio aire"
       }
     }
   }
