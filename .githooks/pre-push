@@ -1,0 +1,20 @@
+#!/bin/sh
+# Compuerta local. Corre lo MISMO que el CI, antes de que nada salga de la máquina.
+#
+# Existe porque en GitHub Free los rulesets no aplican a repos privados, así que no
+# hay status check requerido que bloquee un merge (meta/ADR-0011).
+#
+# Para el chequeo de privacidad esto es MEJOR que un check requerido: un dato de
+# cliente que ya se pusheó queda en el historial de GitHub para siempre, se fusione
+# el PR o no. Acá se detiene antes de salir.
+#
+# Se saltea con --no-verify. Es un límite conocido y declarado en el ADR.
+
+echo "→ compuerta local: npm run check"
+if ! npm run --silent check; then
+  echo ""
+  echo "✗ El push se detuvo: 'npm run check' falló."
+  echo "  Arreglalo. Si tenés que pushear igual: git push --no-verify"
+  echo "  (y entonces el CI lo va a marcar en rojo, que es la segunda capa)"
+  exit 1
+fi
