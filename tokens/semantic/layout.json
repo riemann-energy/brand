@@ -29,6 +29,21 @@
       "$value": "clamp(56px, 6.5vw, 100px)",
       "$type": "fluid",
       "$description": "El aire entre secciones"
+    },
+    "columns": {
+      "$value": "clamp(24px, 4vw, 64px)",
+      "$type": "fluid",
+      "$description": "Separación entre columnas de una sección a dos"
+    },
+    "columns-wide": {
+      "$value": "clamp(24px, 5vw, 80px)",
+      "$type": "fluid",
+      "$description": "Idem, cuando las dos columnas son de peso muy distinto"
+    },
+    "section-lg": {
+      "$value": "clamp(80px, 10vw, 160px)",
+      "$type": "fluid",
+      "$description": "El aire de una sección que cierra: más que el de una sección normal, para que se lea como final"
     }
   },
   "radius": {

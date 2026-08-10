@@ -14,6 +14,8 @@ export declare const base: {
     'font-size-hero': string;
     'font-size-wordmark': string;
     'font-size-wordmark-sm': string;
+    'font-size-giant': string;
+    'font-size-figure': string;
     'font-leading-display': string;
     'font-leading-tight': string;
     'font-leading-body': string;
@@ -25,6 +27,9 @@ export declare const base: {
     'space-5': string;
     'space-6': string;
     'space-section': string;
+    'space-columns': string;
+    'space-columns-wide': string;
+    'space-section-lg': string;
     'radius-box': string;
     'radius-button': string;
     'radius-pill': string;
@@ -35,6 +40,7 @@ export declare const base: {
     'motion-duration-ambient-1': string;
     'motion-duration-ambient-2': string;
     'motion-duration-ambient-3': string;
+    'motion-duration-flow': string;
     'motion-easing-default': string;
     'motion-distance': string;
     'motion-stagger': string;

@@ -24,6 +24,11 @@
       "ambient-3": {
         "$value": "42s",
         "$type": "duration"
+      },
+      "flow": {
+        "$value": "2.6s",
+        "$type": "duration",
+        "$description": "El punto que recorre un conector de flujo. Lento a propósito: sugiere movimiento continuo, no una animación que reclama atención"
       }
     },
     "easing": {

@@ -67,6 +67,16 @@
         "$value": "15px",
         "$type": "dimension",
         "$description": "Variante mínima con nombre, para el pie: símbolo de 20px"
+      },
+      "giant": {
+        "$value": "clamp(96px, 17vw, 230px)",
+        "$type": "fluid",
+        "$description": "La cifra que domina una sección entera. Se usa una vez por página, como mucho: dos cifras gigantes compiten y ninguna gana"
+      },
+      "figure": {
+        "$value": "26px",
+        "$type": "dimension",
+        "$description": "Cifra de lista, en mono y con numeración tabular para que las columnas alineen"
       }
     },
     "leading": {
