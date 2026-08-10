@@ -48,19 +48,23 @@ jobs:
   # puede afectar lo que se ve: los assets, las tipografías o el script que los usa.
   visual:
     runs-on: ubuntu-latest
+    # La MISMA imagen que se usa en local y que usa `site` (site/ADR-0006). Antes era
+    # `ubuntu-latest` + `npm i -D playwright` SIN pinear, y esa versión flotante es lo
+    # que hacía irreproducible el chequeo del og.png (ADR-0004).
+    #
+    # ⚠️ La versión vive en dos lugares —package.json y acá— y se mueven juntas.
+    container:
+      image: mcr.microsoft.com/playwright:v1.62.1-noble
+      options: --ipc=host
     if: |
       github.event_name == 'push' ||
       contains(github.event.pull_request.labels.*.name, 'visual')
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-
-      - run: npm ci
-      - run: npm i -D playwright && npx playwright install --with-deps chromium
+      # El Node de la imagen, y `playwright` como devDependency pineada: los
+      # navegadores ya vienen en la imagen, así que no hay `playwright install`.
+      - run: npm ci --no-audit --no-fund
 
       - name: og.png al día y tipografías completas
         run: npm run check:visual
