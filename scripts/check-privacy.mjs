@@ -47,7 +47,13 @@ const PATRONES = [
     nombre: 'Correo de persona identificable',
     // El TLD tiene que terminar en letras: así un tag de versión como
     // «brand@v1.0.0» —que también es algo@algo.algo— no dispara.
-    re: /\b[\w.+-]+@(?!riemann\.energy\b)[\w-]+(?:\.[\w-]+)*\.[a-z]{2,}\b/gi,
+    // Se excluye el local-part `git` EXACTO: `git@github.com` no es el correo de
+    // nadie, es el usuario SSH de los hosts de git, y aparece en cualquier `git
+    // clone` de la documentación y en package-lock.json. Sin esta exclusión el
+    // chequeo grita en falso, y un chequeo que grita en falso se termina silenciando
+    // entero. Un `algogit@dominio.com` sigue disparando: la exclusión es del
+    // local-part completo, no de un prefijo.
+    re: /\b(?!git@)[\w.+-]+@(?!riemann\.energy\b)[\w-]+(?:\.[\w-]+)*\.[a-z]{2,}\b/gi,
     nota: 'correo fuera del dominio propio',
   },
 ];
