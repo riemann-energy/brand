@@ -82,6 +82,7 @@ export declare const dark: {
     'color-accent-on': string;
     'color-accent-subtle': string;
     'color-accent-border': string;
+    'color-accent-atmosphere': string;
     'color-status-critical': string;
     'color-status-warning': string;
     'color-status-info': string;
@@ -110,6 +111,7 @@ export declare const light: {
     'color-accent-on': string;
     'color-accent-subtle': string;
     'color-accent-border': string;
+    'color-accent-atmosphere': string;
     'color-status-critical': string;
     'color-status-warning': string;
     'color-status-info': string;

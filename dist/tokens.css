@@ -85,11 +85,12 @@
   --color-fg-default: #edefee;
   --color-fg-muted: #8a918f;
   --color-fg-subtle: #5c6362;
-  --color-accent-default: #baddce;
-  --color-accent-hover: #cfe9de;
-  --color-accent-on: #0b0c0c; /** El color del texto que va ENCIMA del acento */
-  --color-accent-subtle: #161e1b;
-  --color-accent-border: #2e3f39;
+  --color-accent-default: #3df29a;
+  --color-accent-hover: #7ff6bf;
+  --color-accent-on: #0b0c0c; /** El color del texto que va ENCIMA del acento. Nunca blanco: sobre el menta daría 1.46:1 y no pasa AA. */
+  --color-accent-subtle: #10201a;
+  --color-accent-border: #24473a;
+  --color-accent-atmosphere: #7ce8b4; /** Decoración, no interfaz: solo lo leen los campos de partículas y las retículas del hero. No lo usa ningún texto, borde ni botón, así que queda FUERA del cálculo de contraste. Va más apagado que el acento a propósito — ver la nota del primitivo mint.8. */
   --color-status-critical: #f0555f;
   --color-status-warning: #e8b23c;
   --color-status-info: #6a9ce0;
@@ -114,11 +115,12 @@
   --color-fg-default: #0e100f;
   --color-fg-muted: #585e5c;
   --color-fg-subtle: #868c8a;
-  --color-accent-default: #1c3a30;
-  --color-accent-hover: #122a22;
-  --color-accent-on: #baddce;
-  --color-accent-subtle: #e7f2ed;
-  --color-accent-border: #c3d9cf;
+  --color-accent-default: #133c26;
+  --color-accent-hover: #0b2c1a;
+  --color-accent-on: #3df29a;
+  --color-accent-subtle: #e1f5e8;
+  --color-accent-border: #b7dec5;
+  --color-accent-atmosphere: #133c26; /** Existe para que el token no falte en un tema y el consumidor no caiga en un respaldo silencioso. Apunta al menta profundo, no al claro: sobre un fondo claro el mint.8 sería invisible. Hoy nada lo consume — los campos de partículas solo corren en oscuro. */
   --color-status-critical: #c42f36;
   --color-status-warning: #9a7407;
   --color-status-info: #2358ce;

@@ -10,6 +10,40 @@ Qué cambió en cada versión, para decidir si te conviene actualizar. Sigue
 
 ---
 
+## [2.0.0] — sin publicar
+
+**MAJOR: el acento de marca pasa de celadón `#BADDCE` a menta `#3DF29A`.** Ningún token cambia de
+nombre; lo que lo vuelve MAJOR es la regla de [ADR-0008](docs/adr/0008-versionado.md) — un cambio de
+valor que altera el contraste no puede viajar como PATCH, porque quien actualiza no espera tener que
+reauditar accesibilidad.
+
+⚠️ **Esta versión contradice D24 y D25**, las dos decisiones de Marco que congelaron el acento en la
+zona pálida de croma bajo. El razonamiento completo, con lo que se midió y lo que quedó abierto, está
+en [ADR-0010](docs/adr/0010-el-acento-pasa-de-celadon-a-menta.md), que sigue en **Propuesta**.
+
+### Cambiado
+
+- **La rampa `celadon` se reemplaza por `mint`**, de nueve pasos. Los primitivos no salen al CSS
+  ([ADR-0001](docs/adr/0001-primitivos-no-salen-al-css.md)), así que esto no es API pública — pero
+  mueve los diez semánticos de acento de los dos temas.
+- **Los assets de marca se movieron con él**: `riemann-marca.svg`, `favicon.svg` y `og-template.svg`
+  tenían el celadón escrito adentro. No era opcional: `check:tokens` rechaza un color de asset que no
+  esté en el sistema. El `og.png` se re-renderizó y su centinela quedó al día.
+
+### Agregado
+
+- **`color.accent.atmosphere`** — decoración pura: solo lo leen los campos de partículas y las
+  retículas del hero, y queda fuera del cálculo de contraste. **Cierra un hueco que ya existía**:
+  cuatro componentes de `site` venían leyendo `--color-accent-atmosphere`, una variable que **ningún
+  archivo de `brand` definía**, y caían al respaldo `|| accent-default` sin que nada avisara.
+
+**Verificado:** 90 variables · `npm run check` da 32/32 pares de contraste en ambos temas ·
+`check:visual` en verde. **Lo que NO se verificó:** la separación de matiz contra los colores
+funcionales. Medida a mano, el menta queda a **9.1°** de `status.success` —el celadón estaba a
+20.2°— y ninguna herramienta del repo mira esa distancia.
+
+---
+
 ## [1.1.0] — sin publicar
 
 **MINOR: se agregan ocho tokens, no cambia ninguno.** Los pidió la implementación de las diez

@@ -17,10 +17,16 @@ nueva que la supersede.
 | [0007](0007-sin-svgo.md) | Los SVG no pasan por SVGO | ✅ Aceptada |
 | [0008](0008-versionado.md) | SemVer con CHANGELOG a mano, sin Changesets | ✅ Aceptada |
 | [0009](0009-estrategia-de-chequeos.md) | Qué se chequea, y por qué el navegador va aparte | ✅ Aceptada |
+| [0010](0010-el-acento-pasa-de-celadon-a-menta.md) | El acento pasa de celadón a menta | 🟡 Propuesta — **supersede D24 y D25, decide Marco** |
 
 ## Sin decidir todavía
 
-**Ninguna.** Las tres cosas que estaban abiertas se resolvieron: el `og:image` en
+**Una: el acento menta.** [ADR-0010](0010-el-acento-pasa-de-celadon-a-menta.md) está implementado y
+verificado, pero contradice D24 y D25 —las dos de Marco— así que queda en `Propuesta` hasta su firma.
+Y deja abierto un pendiente aparte: el menta queda a **9.1° de matiz** de `status.success`, y ningún
+chequeo del repo mira esa distancia.
+
+Las tres cosas que estaban abiertas antes sí se resolvieron: el `og:image` en
 [ADR-0007 cross-repo](https://github.com/riemann-energy/meta/blob/main/why/0007-og-image.md), y
 los dos colores fuera del sistema al rehacerlo.
 

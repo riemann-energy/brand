@@ -6,7 +6,7 @@
   <rect width="1200" height="630" fill="#0B0C0C"/>
   <g transform="translate(96,232) scale(4.2)">
     <path fill="#EDEFEE" d="M1.4 5.1 L3 3.5 H10.4 V20.5 H1.4 Z"/>
-    <path fill="#BADDCE" d="M13.6 3.5 H22.6 V18.9 L21 20.5 H13.6 Z"/>
+    <path fill="#3DF29A" d="M13.6 3.5 H22.6 V18.9 L21 20.5 H13.6 Z"/>
   </g>
   <!-- Un solo <text> con tspans: el espacio entre las dos palabras sale del flujo,
        no de una x calculada a mano que se desalinea al cambiar de fuente o peso. -->
@@ -14,5 +14,5 @@
         font-size="76" letter-spacing="-2.4">
     <tspan font-weight="600" fill="#EDEFEE">Riemann</tspan><tspan font-weight="400" fill="#8A918F" dx="18">Energy</tspan>
   </text>
-  <rect x="234" y="398" width="96" height="3" fill="#BADDCE"/>
+  <rect x="234" y="398" width="96" height="3" fill="#3DF29A"/>
 </svg>
