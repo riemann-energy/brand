@@ -1,6 +1,11 @@
 # brand/ADR-0010 · El acento pasa de celadón a menta
 
-**Fecha:** 2026-08-15 · **Estado:** Propuesta · **Decide:** Marco
+**Fecha:** 2026-08-15 · **Estado:** Aceptada · **Decide:** Marco
+
+> **Firmado el 2026-08-15.** Marco y Andrés acordaron adoptarlo sabiendo que supersede D24 y
+> D25, y **aceptando la colisión de 9.1° de matiz con `status.success`** en vez de dejarla
+> abierta. Las tres quedan registradas como `D43`, `D44` y `D45` en
+> `content/method/decisiones.md`.
 
 ---
 
@@ -26,9 +31,10 @@ contradice.
 La luminosidad no se movió, y eso importa: la mitad de D24 —la zona pálida— se respeta. Lo que se
 rompe es la otra mitad, la reserva de croma.
 
-⚠️ **Por eso este ADR queda en `Propuesta` y no en `Aceptada`.** La paleta la decide Marco
-(`meta/reference/quien-decide.md`). El trabajo está hecho, verificado y es reversible con un
-`git revert`; lo que falta es la firma, no la implementación.
+⚠️ **Esto se escribió mientras el ADR estaba en `Propuesta`.** La paleta la decide Marco
+(`meta/reference/quien-decide.md`), y la implementación se adelantó a la firma: el menta llegó a
+`main`, a un tag y al sitio antes de que la decisión existiera. Salió bien porque la firma llegó,
+pero el orden fue el equivocado y conviene no repetirlo.
 
 ## Decisión
 
@@ -112,9 +118,13 @@ número **no se volvió a auditar** con el menta adentro.
 
 **Riesgo conocido**
 
-- **La colisión con `status.success` queda abierta.** Ninguna herramienta del repo la detecta. Las
-  salidas: correr el verde de éxito en matiz, bajarle croma al menta, o aceptar la colisión por
-  escrito. **Ninguna está hecha** — se declara acá para que no se pierda.
+- **La colisión con `status.success` se aceptó por escrito** (`D44`, 2026-08-15). Era una de las
+  tres salidas —correr el verde de éxito en matiz, bajarle croma al menta, o asumirla— y es la que
+  se eligió: se conoce, se midió y se asume.
+
+  Lo que **sigue sin existir es la herramienta**: ningún chequeo del repo mide separación de matiz,
+  así que si mañana alguien acerca un color funcional al acento, nada lo va a decir. Si el semáforo
+  del producto llega a confundirse con la marca, esto es lo primero que hay que revisar.
 - La rampa `celadon` se eliminó en vez de dejarse muerta, siguiendo la regla del repo de mostrar el
   presente y no la historia. El valor vive en el git y en D25.
 
