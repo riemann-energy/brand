@@ -17,12 +17,13 @@
       "subtle":  { "$value": "{color.graphite.8}",  "$type": "color" }
     },
     "accent": {
-      "$description": "En claro el celadón NO puede rellenar un CTA: no hay contraste. Se invierte — el botón es tinta profunda con el texto en celadón.",
-      "default": { "$value": "{color.celadon.5}", "$type": "color" },
-      "hover":   { "$value": "{color.celadon.6}", "$type": "color" },
-      "on":      { "$value": "{color.celadon.3}", "$type": "color" },
-      "subtle":  { "$value": "{color.celadon.0}", "$type": "color" },
-      "border":  { "$value": "{color.celadon.2}", "$type": "color" }
+      "$description": "En claro el menta NO puede rellenar un CTA: no hay contraste. Se invierte — el botón es tinta profunda con el texto en menta.",
+      "default": { "$value": "{color.mint.5}", "$type": "color" },
+      "hover":   { "$value": "{color.mint.6}", "$type": "color" },
+      "on":      { "$value": "{color.mint.3}", "$type": "color" },
+      "subtle":  { "$value": "{color.mint.0}", "$type": "color" },
+      "border":  { "$value": "{color.mint.2}", "$type": "color" },
+      "atmosphere": { "$value": "{color.mint.5}", "$type": "color", "$description": "Existe para que el token no falte en un tema y el consumidor no caiga en un respaldo silencioso. Apunta al menta profundo, no al claro: sobre un fondo claro el mint.8 sería invisible. Hoy nada lo consume — los campos de partículas solo corren en oscuro." }
     },
     "status": {
       "critical": { "$value": "{color.red.700}",   "$type": "color" },

@@ -17,11 +17,12 @@
       "subtle":  { "$value": "{color.graphite.9}",  "$type": "color" }
     },
     "accent": {
-      "default": { "$value": "{color.celadon.3}",  "$type": "color" },
-      "hover":   { "$value": "{color.celadon.1}",  "$type": "color" },
-      "on":      { "$value": "{color.graphite.17}", "$type": "color", "$description": "El color del texto que va ENCIMA del acento" },
-      "subtle":  { "$value": "{color.celadon.7}",  "$type": "color" },
-      "border":  { "$value": "{color.celadon.4}",  "$type": "color" }
+      "default": { "$value": "{color.mint.3}",  "$type": "color" },
+      "hover":   { "$value": "{color.mint.1}",  "$type": "color" },
+      "on":      { "$value": "{color.graphite.17}", "$type": "color", "$description": "El color del texto que va ENCIMA del acento. Nunca blanco: sobre el menta daría 1.46:1 y no pasa AA." },
+      "subtle":  { "$value": "{color.mint.7}",  "$type": "color" },
+      "border":  { "$value": "{color.mint.4}",  "$type": "color" },
+      "atmosphere": { "$value": "{color.mint.8}", "$type": "color", "$description": "Decoración, no interfaz: solo lo leen los campos de partículas y las retículas del hero. No lo usa ningún texto, borde ni botón, así que queda FUERA del cálculo de contraste. Va más apagado que el acento a propósito — ver la nota del primitivo mint.8." }
     },
     "status": {
       "critical": { "$value": "{color.red.400}",   "$type": "color" },
